@@ -1,0 +1,2112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+	Mapping Facility v2024-02-02_asIDS by AEC3 UK Ltd for buildingSMART
+	-->
+<ids:ids xsi:schemaLocation="http://standards.buildingsmart.org/IDS ids.xsd" xmlns:ids="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://standards.buildingsmart.org/IDS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ids:info>
+    <ids:title>buildingSMART Sustainability Information Delivery Specification for Facility</ids:title>
+    <ids:copyright>buildingSMART. Licenced under CCL 4 BY-NC-SA</ids:copyright>
+    <ids:version>v2024-03-01</ids:version>
+    <ids:description>buildingSMART Sustainability Information Delivery Specification for Facility</ids:description>
+    <ids:author>contact@buildingSMART.org</ids:author>
+    <ids:date>2024-03-01</ids:date>
+    <ids:purpose>Supporting Facility Sustainability Assessment</ids:purpose>
+    <ids:milestone>All</ids:milestone>
+  </ids:info>
+  <ids:specifications>
+    <!--Sustainability Facility.0.1 : All : Context information-->
+    <ids:specification name="Sustainability.Facility.0.1" description="Sustainability Assessment of Location for Context information using IFC2X3. EN 15804 All. " ifcVersion="IFC2X3" instructions="Correction required to support EN 15804 All.">
+      <ids:applicability>
+        <entity>
+          <ids:name>
+            <ids:simpleValue>IFCSITE</ids:simpleValue>
+          </ids:name>
+        </entity>
+      </ids:applicability>
+      <ids:requirements description="Sustainability Requirement for Facility.0.1">
+        <attribute instructions="ISO two-letter country code" cardinality="required">
+          <ids:name>
+            <ids:simpleValue>SiteAddress</ids:simpleValue>
+          </ids:name>
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:value>
+        </attribute>
+        <attribute instructions="location of site" cardinality="required">
+          <ids:name>
+            <ids:simpleValue>RefLatitude</ids:simpleValue>
+          </ids:name>
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:value>
+        </attribute>
+        <attribute instructions="location of site" cardinality="required">
+          <ids:name>
+            <ids:simpleValue>RefLongitude</ids:simpleValue>
+          </ids:name>
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:value>
+        </attribute>
+        <attribute instructions="length" cardinality="required">
+          <ids:name>
+            <ids:simpleValue>RefElevation</ids:simpleValue>
+          </ids:name>
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:value>
+        </attribute>
+      </ids:requirements>
+    </ids:specification>
+    <!--Sustainability Facility.0.1 : All : Context information-->
+    <ids:specification name="Sustainability.Facility.0.1" description="Sustainability Assessment of Location for Context information using IFC4X3. EN 15804 All. " ifcVersion="IFC4X3" instructions="Correction required to support EN 15804 All.">
+      <ids:applicability>
+        <entity>
+          <ids:name>
+            <ids:simpleValue>IFCSITE</ids:simpleValue>
+          </ids:name>
+        </entity>
+      </ids:applicability>
+      <ids:requirements description="Sustainability Requirement for Facility.0.1">
+        <attribute instructions="ISO two-letter country code" cardinality="required">
+          <ids:name>
+            <ids:simpleValue>SiteAddress</ids:simpleValue>
+          </ids:name>
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:value>
+        </attribute>
+        <attribute instructions="location of site" cardinality="required">
+          <ids:name>
+            <ids:simpleValue>RefLatitude</ids:simpleValue>
+          </ids:name>
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:value>
+        </attribute>
+        <attribute instructions="location of site" cardinality="required">
+          <ids:name>
+            <ids:simpleValue>RefLongitude</ids:simpleValue>
+          </ids:name>
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:value>
+        </attribute>
+        <attribute instructions="length" cardinality="required">
+          <ids:name>
+            <ids:simpleValue>RefElevation</ids:simpleValue>
+          </ids:name>
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:value>
+        </attribute>
+      </ids:requirements>
+    </ids:specification>
+    <!--Sustainability Facility.0.2 : All : Context information-->
+    <ids:specification name="Sustainability.Facility.0.2" description="Sustainability Assessment of History for Context information using IFC2X3. EN 15804 All. " ifcVersion="IFC2X3" instructions="Correction required to support EN 15804 All.">
+      <ids:applicability>
+        <entity>
+          <ids:name>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="IFCBUILDING" />
+            </xs:restriction>
+          </ids:name>
+        </entity>
+      </ids:applicability>
+      <ids:requirements description="Sustainability Requirement for Facility.0.2">
+        <property instructions="datetime" dataType="IFCLABEL">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_BuildingCommon</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>YearOfConstruction</ids:simpleValue>
+          </ids:baseName>
+        </property>
+        <classification instructions="to any ISO12006-2 entity (A.9) table." cardinality="required">
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:value>
+          <ids:system>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:system>
+        </classification>
+      </ids:requirements>
+    </ids:specification>
+    <!--Sustainability Facility.0.2 : All : Context information-->
+    <ids:specification name="Sustainability.Facility.0.2" description="Sustainability Assessment of History for Context information using IFC4X3. EN 15804 All. " ifcVersion="IFC4X3" instructions="Correction required to support EN 15804 All.">
+      <ids:applicability>
+        <entity>
+          <ids:name>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="IFCFACILITY" />
+              <xs:enumeration value="IFCBRIDGE" />
+              <xs:enumeration value="IFCBUILDING" />
+              <xs:enumeration value="IFCMARINEFACILITY" />
+              <xs:enumeration value="IFCRAILWAY" />
+              <xs:enumeration value="IFCROAD" />
+            </xs:restriction>
+          </ids:name>
+        </entity>
+      </ids:applicability>
+      <ids:requirements description="Sustainability Requirement for Facility.0.2">
+        <property instructions="datetime" dataType="IFCLABEL">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_BuildingCommon</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>YearOfConstruction</ids:simpleValue>
+          </ids:baseName>
+        </property>
+        <classification instructions="to any ISO12006-2 entity (A.9) table." cardinality="required">
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:value>
+          <ids:system>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:system>
+        </classification>
+      </ids:requirements>
+    </ids:specification>
+    <!--Sustainability Facility.1.1 : A and C : Embedded resources-->
+    <ids:specification name="Sustainability.Facility.1.1" description="Sustainability Assessment of Components for Embedded resources using IFC2X3. EN 15804 A and C. " ifcVersion="IFC2X3" instructions="Correction required to support EN 15804 A and C.">
+      <ids:applicability>
+        <entity>
+          <ids:name>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="IFCXX" />
+            </xs:restriction>
+          </ids:name>
+        </entity>
+        <property dataType="IFCVOLUMEMEASURE">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>NetVolume</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:minInclusive value="0.1" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+      </ids:applicability>
+      <ids:requirements description="Sustainability Requirement for Facility.1.1">
+        <classification instructions="to any ISO12006-2 product (A.3) table" cardinality="required">
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:value>
+          <ids:system>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:system>
+        </classification>
+        <property instructions="volume" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/NetVolume" dataType="IFCVOLUMEMEASURE">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>NetVolume</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:minInclusive value="0" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+        <property instructions="or generic" dataType="IFCLABEL">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_ManufacturerTypeInformation</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>Manufacturer</ids:simpleValue>
+          </ids:baseName>
+        </property>
+        <property dataType="IFCLABEL">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_ManufacturerTypeInformation</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>ModelLabel</ids:simpleValue>
+          </ids:baseName>
+        </property>
+        <property instructions="datetime" dataType="IFCLABEL">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_ManufacturerOccurence</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>ManufacturingDate</ids:simpleValue>
+          </ids:baseName>
+        </property>
+        <property instructions="uri" dataType="IFCURIREFERENCE">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_ManufacturerTypeInformation</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>ProductData</ids:simpleValue>
+          </ids:baseName>
+        </property>
+        <attribute instructions="components must have type" cardinality="required">
+          <ids:name>
+            <ids:simpleValue>PredefinedType</ids:simpleValue>
+          </ids:name>
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:value>
+        </attribute>
+        <property instructions="new/existing/demolish/temporary" dataType="IFCLABEL">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>Status</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:enumeration value="NEW" />
+              <xs:enumeration value="EXISTING" />
+              <xs:enumeration value="DEMOLISH" />
+              <xs:enumeration value="TEMPORARY" />
+              <xs:enumeration value="OTHER" />
+              <xs:enumeration value="NOTKNOWN" />
+              <xs:enumeration value="UNSET" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+      </ids:requirements>
+    </ids:specification>
+    <!--Sustainability Facility.1.1 : A and C : Embedded resources-->
+    <ids:specification name="Sustainability.Facility.1.1" description="Sustainability Assessment of Components for Embedded resources using IFC4X3. EN 15804 A and C. " ifcVersion="IFC4X3" instructions="Correction required to support EN 15804 A and C.">
+      <ids:applicability>
+        <entity>
+          <ids:name>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="IFCBUILTELEMENT" />
+              <xs:enumeration value="IFCBEAM" />
+              <xs:enumeration value="IFCBEARING" />
+              <xs:enumeration value="IFCCHIMNEY" />
+              <xs:enumeration value="IFCCOLUMN" />
+              <xs:enumeration value="IFCCOURSE" />
+              <xs:enumeration value="IFCCOVERING" />
+              <xs:enumeration value="IFCCURTAINWALL" />
+              <xs:enumeration value="IFCPILE" />
+              <xs:enumeration value="IFCDOOR" />
+              <xs:enumeration value="IFCFOOTING" />
+              <xs:enumeration value="IFCKERB" />
+              <xs:enumeration value="IFCMEMBER" />
+              <xs:enumeration value="IFCPLATE" />
+              <xs:enumeration value="IFCRAIL" />
+              <xs:enumeration value="IFCRAILING" />
+              <xs:enumeration value="IFCRAMP" />
+              <xs:enumeration value="IFCRAMPFLIGHT" />
+              <xs:enumeration value="IFCROOF" />
+              <xs:enumeration value="IFCSHADINGDEVICE" />
+              <xs:enumeration value="IFCSLAB" />
+              <xs:enumeration value="IFCSTAIR" />
+              <xs:enumeration value="IFCSTAIRFLIGHT" />
+              <xs:enumeration value="IFCWALL" />
+              <xs:enumeration value="IFCWALLSTANDARDCASE" />
+              <xs:enumeration value="IFCWINDOW" />
+              <xs:enumeration value="IFCDISTRIBUTIONELEMENT" />
+              <xs:enumeration value="IFCDISTRIBUTIONCONTROLELEMENT" />
+              <xs:enumeration value="IFCACTUATOR" />
+              <xs:enumeration value="IFCALARM" />
+              <xs:enumeration value="IFCCONTROLLER" />
+              <xs:enumeration value="IFCFLOWINSTRUMENT" />
+              <xs:enumeration value="IFCPROTECTIVEDEVICETRIPPINGUNIT" />
+              <xs:enumeration value="IFCSENSOR" />
+              <xs:enumeration value="IFCUNITARYCONTROLELEMENT" />
+              <xs:enumeration value="IFCDISTRIBUTIONFLOWELEMENT" />
+              <xs:enumeration value="IFCDISTRIBUTIONCHAMBERELEMENT" />
+              <xs:enumeration value="IFCENERGYCONVERSIONDEVICE" />
+              <xs:enumeration value="IFCAIRTOAIRHEATRECOVERY" />
+              <xs:enumeration value="IFCBOILER" />
+              <xs:enumeration value="IFCBURNER" />
+              <xs:enumeration value="IFCCHILLER" />
+              <xs:enumeration value="IFCCOIL" />
+              <xs:enumeration value="IFCCONDENSER" />
+              <xs:enumeration value="IFCCOOLEDBEAM" />
+              <xs:enumeration value="IFCCOOLINGTOWER" />
+              <xs:enumeration value="IFCELECTRICGENERATOR" />
+              <xs:enumeration value="IFCELECTRICMOTOR" />
+              <xs:enumeration value="IFCENGINE" />
+              <xs:enumeration value="IFCEVAPORATIVECOOLER" />
+              <xs:enumeration value="IFCEVAPORATOR" />
+              <xs:enumeration value="IFCHEATEXCHANGER" />
+              <xs:enumeration value="IFCHUMIDIFIER" />
+              <xs:enumeration value="IFCMOTORCONNECTION" />
+              <xs:enumeration value="IFCSOLARDEVICE" />
+              <xs:enumeration value="IFCTRANSFORMER" />
+              <xs:enumeration value="IFCTUBEBUNDLE" />
+              <xs:enumeration value="IFCUNITARYEQUIPMENT" />
+              <xs:enumeration value="IFCFLOWCONTROLLER" />
+              <xs:enumeration value="IFCAIRTERMINALBOX" />
+              <xs:enumeration value="IFCDAMPER" />
+              <xs:enumeration value="IFCDISTRIBUTIONBOARD" />
+              <xs:enumeration value="IFCFLOWMETER" />
+              <xs:enumeration value="IFCPROTECTIVEDEVICE" />
+              <xs:enumeration value="IFCSWITCHINGDEVICE" />
+              <xs:enumeration value="IFCVALVE" />
+              <xs:enumeration value="IFCFLOWFITTING" />
+              <xs:enumeration value="IFCCABLECARRIERFITTING" />
+              <xs:enumeration value="IFCCABLEFITTING" />
+              <xs:enumeration value="IFCDUCTFITTING" />
+              <xs:enumeration value="IFCJUNCTIONBOX" />
+              <xs:enumeration value="IFCPIPEFITTING" />
+              <xs:enumeration value="IFCFLOWMOVINGDEVICE" />
+              <xs:enumeration value="IFCCOMPRESSOR" />
+              <xs:enumeration value="IFCFAN" />
+              <xs:enumeration value="IFCPUMP" />
+              <xs:enumeration value="IFCFLOWSEGMENT" />
+              <xs:enumeration value="IFCCABLECARRIERSEGMENT" />
+              <xs:enumeration value="IFCCABLESEGMENT" />
+              <xs:enumeration value="IFCDUCTSEGMENT" />
+              <xs:enumeration value="IFCPIPESEGMENT" />
+              <xs:enumeration value="IFCFLOWSTORAGEDEVICE" />
+              <xs:enumeration value="IFCELECTRICFLOWSTORAGEDEVICE" />
+              <xs:enumeration value="IFCTANK" />
+              <xs:enumeration value="IFCFLOWTERMINAL" />
+              <xs:enumeration value="IFCAIRTERMINAL" />
+              <xs:enumeration value="IFCAUDIOVISUALAPPLIANCE" />
+              <xs:enumeration value="IFCELECTRICAPPLIANCE" />
+              <xs:enumeration value="IFCFIRESUPPRESSIONTERMINAL" />
+              <xs:enumeration value="IFCLAMP" />
+              <xs:enumeration value="IFCLIGHTFIXTURE" />
+              <xs:enumeration value="IFCLIQUIDTERMINAL" />
+              <xs:enumeration value="IFCMEDICALDEVICE" />
+              <xs:enumeration value="IFCOUTLET" />
+              <xs:enumeration value="IFCFLOWTERMINAL" />
+              <xs:enumeration value="IFCSPACEHEATER" />
+            </xs:restriction>
+          </ids:name>
+        </entity>
+        <property dataType="IFCVOLUMEMEASURE">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>NetVolume</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:minInclusive value="0.1" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+      </ids:applicability>
+      <ids:requirements description="Sustainability Requirement for Facility.1.1">
+        <classification instructions="to any ISO12006-2 product (A.3) table" cardinality="required">
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:value>
+          <ids:system>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:system>
+        </classification>
+        <property instructions="volume" uri="https://identifier.buildingsmart.org/uri/buildingsmart/ifc/4.3/prop/NetVolume" dataType="IFCVOLUMEMEASURE">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>NetVolume</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:minInclusive value="0" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+        <property instructions="or generic" dataType="IFCLABEL">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_ManufacturerTypeInformation</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>Manufacturer</ids:simpleValue>
+          </ids:baseName>
+        </property>
+        <property dataType="IFCLABEL">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_ManufacturerTypeInformation</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>ModelLabel</ids:simpleValue>
+          </ids:baseName>
+        </property>
+        <property instructions="datetime" dataType="IFCLABEL">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_ManufacturerOccurence</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>ManufacturingDate</ids:simpleValue>
+          </ids:baseName>
+        </property>
+        <property instructions="uri" dataType="IFCURIREFERENCE">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_ManufacturerTypeInformation</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>ProductData</ids:simpleValue>
+          </ids:baseName>
+        </property>
+        <attribute instructions="components must have type" cardinality="required">
+          <ids:name>
+            <ids:simpleValue>PredefinedType</ids:simpleValue>
+          </ids:name>
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:value>
+        </attribute>
+        <property instructions="new/existing/demolish/temporary" dataType="IFCLABEL">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>Status</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:enumeration value="NEW" />
+              <xs:enumeration value="EXISTING" />
+              <xs:enumeration value="DEMOLISH" />
+              <xs:enumeration value="TEMPORARY" />
+              <xs:enumeration value="OTHER" />
+              <xs:enumeration value="NOTKNOWN" />
+              <xs:enumeration value="UNSET" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+      </ids:requirements>
+    </ids:specification>
+    <!--Sustainability Facility.4.1 : D : Circularity potential-->
+    <ids:specification name="Sustainability.Facility.4.1" description="Sustainability Assessment of Components for Circularity potential using IFC2X3. EN 15804 D. " ifcVersion="IFC2X3" instructions="Correction required to support EN 15804 D.">
+      <ids:applicability>
+        <entity>
+          <ids:name>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="IFCXX" />
+            </xs:restriction>
+          </ids:name>
+        </entity>
+        <property dataType="IFCVOLUMEMEASURE">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>NetVolume</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:minInclusive value="0.1" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+      </ids:applicability>
+      <ids:requirements description="Sustainability Requirement for Facility.4.1">
+        <property instructions="lapped/abutted/loose/glued/welded/screwed/nailed/hooked/lathed/strapped/bolted/clicked" dataType="IFCLABEL">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>ConnectionMethod</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:enumeration value="LAPPED" />
+              <xs:enumeration value="ABUTTED" />
+              <xs:enumeration value="LOOSE" />
+              <xs:enumeration value="GLUED" />
+              <xs:enumeration value="WELDED" />
+              <xs:enumeration value="SCREWED" />
+              <xs:enumeration value="NAILED" />
+              <xs:enumeration value="HOOKED" />
+              <xs:enumeration value="LATHED" />
+              <xs:enumeration value="STRAPPED" />
+              <xs:enumeration value="BOLTED" />
+              <xs:enumeration value="CLICKED" />
+              <xs:enumeration value="OTHER" />
+              <xs:enumeration value="NOTKNOWN" />
+              <xs:enumeration value="UNSET" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+        <property instructions="exposed/hidden/embedded" dataType="IFCLABEL">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>AccessibilityForDisassembly</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:enumeration value="EXPOSED" />
+              <xs:enumeration value="HIDDEN" />
+              <xs:enumeration value="EMBEDDED" />
+              <xs:enumeration value="OTHER" />
+              <xs:enumeration value="NOTKNOWN" />
+              <xs:enumeration value="UNSET" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+      </ids:requirements>
+    </ids:specification>
+    <!--Sustainability Facility.4.1 : D : Circularity potential-->
+    <ids:specification name="Sustainability.Facility.4.1" description="Sustainability Assessment of Components for Circularity potential using IFC4X3. EN 15804 D. " ifcVersion="IFC4X3" instructions="Correction required to support EN 15804 D.">
+      <ids:applicability>
+        <entity>
+          <ids:name>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="IFCBUILTELEMENT" />
+              <xs:enumeration value="IFCBEAM" />
+              <xs:enumeration value="IFCBEARING" />
+              <xs:enumeration value="IFCCHIMNEY" />
+              <xs:enumeration value="IFCCOLUMN" />
+              <xs:enumeration value="IFCCOURSE" />
+              <xs:enumeration value="IFCCOVERING" />
+              <xs:enumeration value="IFCCURTAINWALL" />
+              <xs:enumeration value="IFCPILE" />
+              <xs:enumeration value="IFCDOOR" />
+              <xs:enumeration value="IFCFOOTING" />
+              <xs:enumeration value="IFCKERB" />
+              <xs:enumeration value="IFCMEMBER" />
+              <xs:enumeration value="IFCPLATE" />
+              <xs:enumeration value="IFCRAIL" />
+              <xs:enumeration value="IFCRAILING" />
+              <xs:enumeration value="IFCRAMP" />
+              <xs:enumeration value="IFCRAMPFLIGHT" />
+              <xs:enumeration value="IFCROOF" />
+              <xs:enumeration value="IFCSHADINGDEVICE" />
+              <xs:enumeration value="IFCSLAB" />
+              <xs:enumeration value="IFCSTAIR" />
+              <xs:enumeration value="IFCSTAIRFLIGHT" />
+              <xs:enumeration value="IFCWALL" />
+              <xs:enumeration value="IFCWALLSTANDARDCASE" />
+              <xs:enumeration value="IFCWINDOW" />
+              <xs:enumeration value="IFCDISTRIBUTIONELEMENT" />
+              <xs:enumeration value="IFCDISTRIBUTIONCONTROLELEMENT" />
+              <xs:enumeration value="IFCACTUATOR" />
+              <xs:enumeration value="IFCALARM" />
+              <xs:enumeration value="IFCCONTROLLER" />
+              <xs:enumeration value="IFCFLOWINSTRUMENT" />
+              <xs:enumeration value="IFCPROTECTIVEDEVICETRIPPINGUNIT" />
+              <xs:enumeration value="IFCSENSOR" />
+              <xs:enumeration value="IFCUNITARYCONTROLELEMENT" />
+              <xs:enumeration value="IFCDISTRIBUTIONFLOWELEMENT" />
+              <xs:enumeration value="IFCDISTRIBUTIONCHAMBERELEMENT" />
+              <xs:enumeration value="IFCENERGYCONVERSIONDEVICE" />
+              <xs:enumeration value="IFCAIRTOAIRHEATRECOVERY" />
+              <xs:enumeration value="IFCBOILER" />
+              <xs:enumeration value="IFCBURNER" />
+              <xs:enumeration value="IFCCHILLER" />
+              <xs:enumeration value="IFCCOIL" />
+              <xs:enumeration value="IFCCONDENSER" />
+              <xs:enumeration value="IFCCOOLEDBEAM" />
+              <xs:enumeration value="IFCCOOLINGTOWER" />
+              <xs:enumeration value="IFCELECTRICGENERATOR" />
+              <xs:enumeration value="IFCELECTRICMOTOR" />
+              <xs:enumeration value="IFCENGINE" />
+              <xs:enumeration value="IFCEVAPORATIVECOOLER" />
+              <xs:enumeration value="IFCEVAPORATOR" />
+              <xs:enumeration value="IFCHEATEXCHANGER" />
+              <xs:enumeration value="IFCHUMIDIFIER" />
+              <xs:enumeration value="IFCMOTORCONNECTION" />
+              <xs:enumeration value="IFCSOLARDEVICE" />
+              <xs:enumeration value="IFCTRANSFORMER" />
+              <xs:enumeration value="IFCTUBEBUNDLE" />
+              <xs:enumeration value="IFCUNITARYEQUIPMENT" />
+              <xs:enumeration value="IFCFLOWCONTROLLER" />
+              <xs:enumeration value="IFCAIRTERMINALBOX" />
+              <xs:enumeration value="IFCDAMPER" />
+              <xs:enumeration value="IFCDISTRIBUTIONBOARD" />
+              <xs:enumeration value="IFCFLOWMETER" />
+              <xs:enumeration value="IFCPROTECTIVEDEVICE" />
+              <xs:enumeration value="IFCSWITCHINGDEVICE" />
+              <xs:enumeration value="IFCVALVE" />
+              <xs:enumeration value="IFCFLOWFITTING" />
+              <xs:enumeration value="IFCCABLECARRIERFITTING" />
+              <xs:enumeration value="IFCCABLEFITTING" />
+              <xs:enumeration value="IFCDUCTFITTING" />
+              <xs:enumeration value="IFCJUNCTIONBOX" />
+              <xs:enumeration value="IFCPIPEFITTING" />
+              <xs:enumeration value="IFCFLOWMOVINGDEVICE" />
+              <xs:enumeration value="IFCCOMPRESSOR" />
+              <xs:enumeration value="IFCFAN" />
+              <xs:enumeration value="IFCPUMP" />
+              <xs:enumeration value="IFCFLOWSEGMENT" />
+              <xs:enumeration value="IFCCABLECARRIERSEGMENT" />
+              <xs:enumeration value="IFCCABLESEGMENT" />
+              <xs:enumeration value="IFCDUCTSEGMENT" />
+              <xs:enumeration value="IFCPIPESEGMENT" />
+              <xs:enumeration value="IFCFLOWSTORAGEDEVICE" />
+              <xs:enumeration value="IFCELECTRICFLOWSTORAGEDEVICE" />
+              <xs:enumeration value="IFCTANK" />
+              <xs:enumeration value="IFCFLOWTERMINAL" />
+              <xs:enumeration value="IFCAIRTERMINAL" />
+              <xs:enumeration value="IFCAUDIOVISUALAPPLIANCE" />
+              <xs:enumeration value="IFCELECTRICAPPLIANCE" />
+              <xs:enumeration value="IFCFIRESUPPRESSIONTERMINAL" />
+              <xs:enumeration value="IFCLAMP" />
+              <xs:enumeration value="IFCLIGHTFIXTURE" />
+              <xs:enumeration value="IFCLIQUIDTERMINAL" />
+              <xs:enumeration value="IFCMEDICALDEVICE" />
+              <xs:enumeration value="IFCOUTLET" />
+              <xs:enumeration value="IFCFLOWTERMINAL" />
+              <xs:enumeration value="IFCSPACEHEATER" />
+            </xs:restriction>
+          </ids:name>
+        </entity>
+        <property dataType="IFCVOLUMEMEASURE">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>NetVolume</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:minInclusive value="0.1" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+      </ids:applicability>
+      <ids:requirements description="Sustainability Requirement for Facility.4.1">
+        <property instructions="lapped/abutted/loose/glued/welded/screwed/nailed/hooked/lathed/strapped/bolted/clicked" dataType="IFCLABEL">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>ConnectionMethod</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:enumeration value="LAPPED" />
+              <xs:enumeration value="ABUTTED" />
+              <xs:enumeration value="LOOSE" />
+              <xs:enumeration value="GLUED" />
+              <xs:enumeration value="WELDED" />
+              <xs:enumeration value="SCREWED" />
+              <xs:enumeration value="NAILED" />
+              <xs:enumeration value="HOOKED" />
+              <xs:enumeration value="LATHED" />
+              <xs:enumeration value="STRAPPED" />
+              <xs:enumeration value="BOLTED" />
+              <xs:enumeration value="CLICKED" />
+              <xs:enumeration value="OTHER" />
+              <xs:enumeration value="NOTKNOWN" />
+              <xs:enumeration value="UNSET" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+        <property instructions="exposed/hidden/embedded" dataType="IFCLABEL">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>AccessibilityForDisassembly</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:enumeration value="EXPOSED" />
+              <xs:enumeration value="HIDDEN" />
+              <xs:enumeration value="EMBEDDED" />
+              <xs:enumeration value="OTHER" />
+              <xs:enumeration value="NOTKNOWN" />
+              <xs:enumeration value="UNSET" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+      </ids:requirements>
+    </ids:specification>
+    <!--Sustainability Facility.2.1 : B1 to B5 : Maintenance and replacement-->
+    <ids:specification name="Sustainability.Facility.2.1" description="Sustainability Assessment of Components for Maintenance and replacement using IFC2X3. EN 15804 B1 to B5. " ifcVersion="IFC2X3" instructions="Correction required to support EN 15804 B1 to B5.">
+      <ids:applicability>
+        <entity>
+          <ids:name>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="IFCXX" />
+            </xs:restriction>
+          </ids:name>
+        </entity>
+        <property dataType="IFCVOLUMEMEASURE">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>NetVolume</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:minInclusive value="0.1" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+      </ids:applicability>
+      <ids:requirements description="Sustainability Requirement for Facility.2.1">
+        <property instructions="time" dataType="IFCTIMEMEASURE">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_ServiceLife</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>ServiceLifeDuration</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:minInclusive value="0" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+        <property instructions="time" dataType="IFCTIMEMEASURE">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_ServiceLife</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>MeanTimeBetweenFailure</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:minInclusive value="0" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+        <property instructions="very low/low/typical/high/very high" dataType="IFCLABEL">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_Condition</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>AssessmentConditiom</ids:simpleValue>
+          </ids:baseName>
+        </property>
+        <property instructions="very low/low/typical/high/very high" dataType="IFCLABEL">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>QualityOfComponentsGrade</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:enumeration value="VERY LOW" />
+              <xs:enumeration value="LOW" />
+              <xs:enumeration value="TYPICAL" />
+              <xs:enumeration value="HIGH" />
+              <xs:enumeration value="VERY HIGH" />
+              <xs:enumeration value="OTHER" />
+              <xs:enumeration value="NOTKNOWN" />
+              <xs:enumeration value="UNSET" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+        <property instructions="very low/low/typical/high/very high" dataType="IFCLABEL">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>DesignLevelGrade</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:enumeration value="VERY LOW" />
+              <xs:enumeration value="LOW" />
+              <xs:enumeration value="TYPICAL" />
+              <xs:enumeration value="HIGH" />
+              <xs:enumeration value="VERY HIGH" />
+              <xs:enumeration value="OTHER" />
+              <xs:enumeration value="NOTKNOWN" />
+              <xs:enumeration value="UNSET" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+        <property instructions="very low/low/typical/high/very high" dataType="IFCLABEL">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>WorkExecutionLevelGrade</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:enumeration value="VERY LOW" />
+              <xs:enumeration value="LOW" />
+              <xs:enumeration value="TYPICAL" />
+              <xs:enumeration value="HIGH" />
+              <xs:enumeration value="VERY HIGH" />
+              <xs:enumeration value="OTHER" />
+              <xs:enumeration value="NOTKNOWN" />
+              <xs:enumeration value="UNSET" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+      </ids:requirements>
+    </ids:specification>
+    <!--Sustainability Facility.2.1 : B1 to B5 : Maintenance and replacement-->
+    <ids:specification name="Sustainability.Facility.2.1" description="Sustainability Assessment of Components for Maintenance and replacement using IFC4X3. EN 15804 B1 to B5. " ifcVersion="IFC4X3" instructions="Correction required to support EN 15804 B1 to B5.">
+      <ids:applicability>
+        <entity>
+          <ids:name>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="IFCBUILTELEMENT" />
+              <xs:enumeration value="IFCBEAM" />
+              <xs:enumeration value="IFCBEARING" />
+              <xs:enumeration value="IFCCHIMNEY" />
+              <xs:enumeration value="IFCCOLUMN" />
+              <xs:enumeration value="IFCCOURSE" />
+              <xs:enumeration value="IFCCOVERING" />
+              <xs:enumeration value="IFCCURTAINWALL" />
+              <xs:enumeration value="IFCPILE" />
+              <xs:enumeration value="IFCDOOR" />
+              <xs:enumeration value="IFCFOOTING" />
+              <xs:enumeration value="IFCKERB" />
+              <xs:enumeration value="IFCMEMBER" />
+              <xs:enumeration value="IFCPLATE" />
+              <xs:enumeration value="IFCRAIL" />
+              <xs:enumeration value="IFCRAILING" />
+              <xs:enumeration value="IFCRAMP" />
+              <xs:enumeration value="IFCRAMPFLIGHT" />
+              <xs:enumeration value="IFCROOF" />
+              <xs:enumeration value="IFCSHADINGDEVICE" />
+              <xs:enumeration value="IFCSLAB" />
+              <xs:enumeration value="IFCSTAIR" />
+              <xs:enumeration value="IFCSTAIRFLIGHT" />
+              <xs:enumeration value="IFCWALL" />
+              <xs:enumeration value="IFCWALLSTANDARDCASE" />
+              <xs:enumeration value="IFCWINDOW" />
+              <xs:enumeration value="IFCDISTRIBUTIONELEMENT" />
+              <xs:enumeration value="IFCDISTRIBUTIONCONTROLELEMENT" />
+              <xs:enumeration value="IFCACTUATOR" />
+              <xs:enumeration value="IFCALARM" />
+              <xs:enumeration value="IFCCONTROLLER" />
+              <xs:enumeration value="IFCFLOWINSTRUMENT" />
+              <xs:enumeration value="IFCPROTECTIVEDEVICETRIPPINGUNIT" />
+              <xs:enumeration value="IFCSENSOR" />
+              <xs:enumeration value="IFCUNITARYCONTROLELEMENT" />
+              <xs:enumeration value="IFCDISTRIBUTIONFLOWELEMENT" />
+              <xs:enumeration value="IFCDISTRIBUTIONCHAMBERELEMENT" />
+              <xs:enumeration value="IFCENERGYCONVERSIONDEVICE" />
+              <xs:enumeration value="IFCAIRTOAIRHEATRECOVERY" />
+              <xs:enumeration value="IFCBOILER" />
+              <xs:enumeration value="IFCBURNER" />
+              <xs:enumeration value="IFCCHILLER" />
+              <xs:enumeration value="IFCCOIL" />
+              <xs:enumeration value="IFCCONDENSER" />
+              <xs:enumeration value="IFCCOOLEDBEAM" />
+              <xs:enumeration value="IFCCOOLINGTOWER" />
+              <xs:enumeration value="IFCELECTRICGENERATOR" />
+              <xs:enumeration value="IFCELECTRICMOTOR" />
+              <xs:enumeration value="IFCENGINE" />
+              <xs:enumeration value="IFCEVAPORATIVECOOLER" />
+              <xs:enumeration value="IFCEVAPORATOR" />
+              <xs:enumeration value="IFCHEATEXCHANGER" />
+              <xs:enumeration value="IFCHUMIDIFIER" />
+              <xs:enumeration value="IFCMOTORCONNECTION" />
+              <xs:enumeration value="IFCSOLARDEVICE" />
+              <xs:enumeration value="IFCTRANSFORMER" />
+              <xs:enumeration value="IFCTUBEBUNDLE" />
+              <xs:enumeration value="IFCUNITARYEQUIPMENT" />
+              <xs:enumeration value="IFCFLOWCONTROLLER" />
+              <xs:enumeration value="IFCAIRTERMINALBOX" />
+              <xs:enumeration value="IFCDAMPER" />
+              <xs:enumeration value="IFCDISTRIBUTIONBOARD" />
+              <xs:enumeration value="IFCFLOWMETER" />
+              <xs:enumeration value="IFCPROTECTIVEDEVICE" />
+              <xs:enumeration value="IFCSWITCHINGDEVICE" />
+              <xs:enumeration value="IFCVALVE" />
+              <xs:enumeration value="IFCFLOWFITTING" />
+              <xs:enumeration value="IFCCABLECARRIERFITTING" />
+              <xs:enumeration value="IFCCABLEFITTING" />
+              <xs:enumeration value="IFCDUCTFITTING" />
+              <xs:enumeration value="IFCJUNCTIONBOX" />
+              <xs:enumeration value="IFCPIPEFITTING" />
+              <xs:enumeration value="IFCFLOWMOVINGDEVICE" />
+              <xs:enumeration value="IFCCOMPRESSOR" />
+              <xs:enumeration value="IFCFAN" />
+              <xs:enumeration value="IFCPUMP" />
+              <xs:enumeration value="IFCFLOWSEGMENT" />
+              <xs:enumeration value="IFCCABLECARRIERSEGMENT" />
+              <xs:enumeration value="IFCCABLESEGMENT" />
+              <xs:enumeration value="IFCDUCTSEGMENT" />
+              <xs:enumeration value="IFCPIPESEGMENT" />
+              <xs:enumeration value="IFCFLOWSTORAGEDEVICE" />
+              <xs:enumeration value="IFCELECTRICFLOWSTORAGEDEVICE" />
+              <xs:enumeration value="IFCTANK" />
+              <xs:enumeration value="IFCFLOWTERMINAL" />
+              <xs:enumeration value="IFCAIRTERMINAL" />
+              <xs:enumeration value="IFCAUDIOVISUALAPPLIANCE" />
+              <xs:enumeration value="IFCELECTRICAPPLIANCE" />
+              <xs:enumeration value="IFCFIRESUPPRESSIONTERMINAL" />
+              <xs:enumeration value="IFCLAMP" />
+              <xs:enumeration value="IFCLIGHTFIXTURE" />
+              <xs:enumeration value="IFCLIQUIDTERMINAL" />
+              <xs:enumeration value="IFCMEDICALDEVICE" />
+              <xs:enumeration value="IFCOUTLET" />
+              <xs:enumeration value="IFCFLOWTERMINAL" />
+              <xs:enumeration value="IFCSPACEHEATER" />
+            </xs:restriction>
+          </ids:name>
+        </entity>
+        <property dataType="IFCVOLUMEMEASURE">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>NetVolume</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:minInclusive value="0.1" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+      </ids:applicability>
+      <ids:requirements description="Sustainability Requirement for Facility.2.1">
+        <property instructions="time" dataType="IFCTIMEMEASURE">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_ServiceLife</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>ServiceLifeDuration</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:minInclusive value="0" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+        <property instructions="time" dataType="IFCTIMEMEASURE">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_ServiceLife</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>MeanTimeBetweenFailure</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:minInclusive value="0" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+        <property instructions="very low/low/typical/high/very high" dataType="IFCLABEL">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_Condition</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>AssessmentConditiom</ids:simpleValue>
+          </ids:baseName>
+        </property>
+        <property instructions="very low/low/typical/high/very high" dataType="IFCLABEL">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>QualityOfComponentsGrade</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:enumeration value="VERY LOW" />
+              <xs:enumeration value="LOW" />
+              <xs:enumeration value="TYPICAL" />
+              <xs:enumeration value="HIGH" />
+              <xs:enumeration value="VERY HIGH" />
+              <xs:enumeration value="OTHER" />
+              <xs:enumeration value="NOTKNOWN" />
+              <xs:enumeration value="UNSET" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+        <property instructions="very low/low/typical/high/very high" dataType="IFCLABEL">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>DesignLevelGrade</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:enumeration value="VERY LOW" />
+              <xs:enumeration value="LOW" />
+              <xs:enumeration value="TYPICAL" />
+              <xs:enumeration value="HIGH" />
+              <xs:enumeration value="VERY HIGH" />
+              <xs:enumeration value="OTHER" />
+              <xs:enumeration value="NOTKNOWN" />
+              <xs:enumeration value="UNSET" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+        <property instructions="very low/low/typical/high/very high" dataType="IFCLABEL">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>WorkExecutionLevelGrade</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:enumeration value="VERY LOW" />
+              <xs:enumeration value="LOW" />
+              <xs:enumeration value="TYPICAL" />
+              <xs:enumeration value="HIGH" />
+              <xs:enumeration value="VERY HIGH" />
+              <xs:enumeration value="OTHER" />
+              <xs:enumeration value="NOTKNOWN" />
+              <xs:enumeration value="UNSET" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+      </ids:requirements>
+    </ids:specification>
+    <!--Sustainability Facility.2.2 : B1 to B5 : Maintenance and replacement-->
+    <ids:specification name="Sustainability.Facility.2.2" description="Sustainability Assessment of Condition for Maintenance and replacement using IFC2X3. EN 15804 B1 to B5. " ifcVersion="IFC2X3" instructions="Correction required to support EN 15804 B1 to B5.">
+      <ids:applicability>
+        <entity>
+          <ids:name>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="IFCBUILDING" />
+            </xs:restriction>
+          </ids:name>
+        </entity>
+      </ids:applicability>
+      <ids:requirements description="Sustainability Requirement for Facility.2.2">
+        <property instructions="very low/low/typical/high/very high" dataType="IFCLABEL">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>IndoorEnvironmentGrade</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:enumeration value="VERY LOW" />
+              <xs:enumeration value="LOW" />
+              <xs:enumeration value="TYPICAL" />
+              <xs:enumeration value="HIGH" />
+              <xs:enumeration value="VERY HIGH" />
+              <xs:enumeration value="OTHER" />
+              <xs:enumeration value="NOTKNOWN" />
+              <xs:enumeration value="UNSET" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+        <property instructions="very low/low/typical/high/very high" dataType="IFCLABEL">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>OutdoorEnvironmentGrade</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:enumeration value="VERY LOW" />
+              <xs:enumeration value="LOW" />
+              <xs:enumeration value="TYPICAL" />
+              <xs:enumeration value="HIGH" />
+              <xs:enumeration value="VERY HIGH" />
+              <xs:enumeration value="OTHER" />
+              <xs:enumeration value="NOTKNOWN" />
+              <xs:enumeration value="UNSET" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+        <property instructions="very low/low/typical/high/very high" dataType="IFCLABEL">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>InUseConditionsGrade</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:enumeration value="VERY LOW" />
+              <xs:enumeration value="LOW" />
+              <xs:enumeration value="TYPICAL" />
+              <xs:enumeration value="HIGH" />
+              <xs:enumeration value="VERY HIGH" />
+              <xs:enumeration value="OTHER" />
+              <xs:enumeration value="NOTKNOWN" />
+              <xs:enumeration value="UNSET" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+        <property instructions="very low/low/typical/high/very high" dataType="IFCLABEL">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>MaintenanceLevelGrade</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:enumeration value="VERY LOW" />
+              <xs:enumeration value="LOW" />
+              <xs:enumeration value="TYPICAL" />
+              <xs:enumeration value="HIGH" />
+              <xs:enumeration value="VERY HIGH" />
+              <xs:enumeration value="OTHER" />
+              <xs:enumeration value="NOTKNOWN" />
+              <xs:enumeration value="UNSET" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+      </ids:requirements>
+    </ids:specification>
+    <!--Sustainability Facility.2.2 : B1 to B5 : Maintenance and replacement-->
+    <ids:specification name="Sustainability.Facility.2.2" description="Sustainability Assessment of Condition for Maintenance and replacement using IFC4X3. EN 15804 B1 to B5. " ifcVersion="IFC4X3" instructions="Correction required to support EN 15804 B1 to B5.">
+      <ids:applicability>
+        <entity>
+          <ids:name>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="IFCFACILITY" />
+              <xs:enumeration value="IFCBRIDGE" />
+              <xs:enumeration value="IFCBUILDING" />
+              <xs:enumeration value="IFCMARINEFACILITY" />
+              <xs:enumeration value="IFCRAILWAY" />
+              <xs:enumeration value="IFCROAD" />
+            </xs:restriction>
+          </ids:name>
+        </entity>
+      </ids:applicability>
+      <ids:requirements description="Sustainability Requirement for Facility.2.2">
+        <property instructions="very low/low/typical/high/very high" dataType="IFCLABEL">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>IndoorEnvironmentGrade</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:enumeration value="VERY LOW" />
+              <xs:enumeration value="LOW" />
+              <xs:enumeration value="TYPICAL" />
+              <xs:enumeration value="HIGH" />
+              <xs:enumeration value="VERY HIGH" />
+              <xs:enumeration value="OTHER" />
+              <xs:enumeration value="NOTKNOWN" />
+              <xs:enumeration value="UNSET" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+        <property instructions="very low/low/typical/high/very high" dataType="IFCLABEL">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>OutdoorEnvironmentGrade</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:enumeration value="VERY LOW" />
+              <xs:enumeration value="LOW" />
+              <xs:enumeration value="TYPICAL" />
+              <xs:enumeration value="HIGH" />
+              <xs:enumeration value="VERY HIGH" />
+              <xs:enumeration value="OTHER" />
+              <xs:enumeration value="NOTKNOWN" />
+              <xs:enumeration value="UNSET" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+        <property instructions="very low/low/typical/high/very high" dataType="IFCLABEL">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>InUseConditionsGrade</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:enumeration value="VERY LOW" />
+              <xs:enumeration value="LOW" />
+              <xs:enumeration value="TYPICAL" />
+              <xs:enumeration value="HIGH" />
+              <xs:enumeration value="VERY HIGH" />
+              <xs:enumeration value="OTHER" />
+              <xs:enumeration value="NOTKNOWN" />
+              <xs:enumeration value="UNSET" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+        <property instructions="very low/low/typical/high/very high" dataType="IFCLABEL">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>MaintenanceLevelGrade</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:enumeration value="VERY LOW" />
+              <xs:enumeration value="LOW" />
+              <xs:enumeration value="TYPICAL" />
+              <xs:enumeration value="HIGH" />
+              <xs:enumeration value="VERY HIGH" />
+              <xs:enumeration value="OTHER" />
+              <xs:enumeration value="NOTKNOWN" />
+              <xs:enumeration value="UNSET" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+      </ids:requirements>
+    </ids:specification>
+    <!--Sustainability Facility.3.1 : B6 and B7 : Operating resources-->
+    <ids:specification name="Sustainability.Facility.3.1" description="Sustainability Assessment of Activity for Operating resources using IFC2X3. EN 15804 B6 and B7. " ifcVersion="IFC2X3" instructions="Correction required to support EN 15804 B6 and B7.">
+      <ids:applicability>
+        <entity>
+          <ids:name>
+            <ids:simpleValue>IFCSPACE</ids:simpleValue>
+          </ids:name>
+        </entity>
+        <property dataType="IFCVOLUMEMEASURE">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>NetVolume</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:minInclusive value="3" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+        <property dataType="IFCBOOLEAN">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>IsExternal</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <ids:simpleValue>FALSE</ids:simpleValue>
+          </ids:value>
+        </property>
+      </ids:applicability>
+      <ids:requirements description="Sustainability Requirement for Facility.3.1">
+        <property instructions="number" dataType="IFCCOUNTMEASURE">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_SpaceOccupancyRequirements</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>OccupancyNumber</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:minInclusive value="0" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+        <property instructions="time" dataType="IFCTIMEMEASURE">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_SpaceOccupancyRequirements</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>OccupancyTimePerDay</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:minInclusive value="0" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+        <classification instructions="to any ISO12006-2 space type (A.10) table" cardinality="required">
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:value>
+          <ids:system>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:system>
+        </classification>
+        <property instructions="volume" dataType="IFCVOLUMEMEASURE">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>NetVolume</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:minInclusive value="0" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+        <property instructions="temperature" dataType="IFCTHERMODYNAMICTEMPERTUREMEASURE">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_SpaceHVACDesign</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>TemperatureSetPoint</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:minInclusive value="0" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+        <property instructions="number per time" dataType="IFCTIMEMEASURE">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_SpaceHVACDesign</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>NaturalVentilationRate</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:minInclusive value="0" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+        <!--Warning : Relationship: HasBoundary not supported.-->
+      </ids:requirements>
+    </ids:specification>
+    <!--Sustainability Facility.3.1 : B6 and B7 : Operating resources-->
+    <ids:specification name="Sustainability.Facility.3.1" description="Sustainability Assessment of Activity for Operating resources using IFC4X3. EN 15804 B6 and B7. " ifcVersion="IFC4X3" instructions="Correction required to support EN 15804 B6 and B7.">
+      <ids:applicability>
+        <entity>
+          <ids:name>
+            <ids:simpleValue>IFCSPACE</ids:simpleValue>
+          </ids:name>
+        </entity>
+        <property dataType="IFCVOLUMEMEASURE">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>NetVolume</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:minInclusive value="3" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+        <property dataType="IFCBOOLEAN">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>IsExternal</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <ids:simpleValue>FALSE</ids:simpleValue>
+          </ids:value>
+        </property>
+      </ids:applicability>
+      <ids:requirements description="Sustainability Requirement for Facility.3.1">
+        <property instructions="number" dataType="IFCCOUNTMEASURE">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_SpaceOccupancyRequirements</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>OccupancyNumber</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:minInclusive value="0" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+        <property instructions="time" dataType="IFCTIMEMEASURE">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_SpaceOccupancyRequirements</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>OccupancyTimePerDay</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:minInclusive value="0" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+        <classification instructions="to any ISO12006-2 space type (A.10) table" cardinality="required">
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:value>
+          <ids:system>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:system>
+        </classification>
+        <property instructions="volume" dataType="IFCVOLUMEMEASURE">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>NetVolume</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:minInclusive value="0" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+        <property instructions="temperature" dataType="IFCTHERMODYNAMICTEMPERTUREMEASURE">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_SpaceHVACDesign</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>TemperatureSetPoint</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:minInclusive value="0" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+        <property instructions="number per time" dataType="IFCTIMEMEASURE">
+          <ids:propertySet>
+            <ids:simpleValue>Pset_SpaceHVACDesign</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>NaturalVentilationRate</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:minInclusive value="0" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+        <!--Warning : Relationship: HasBoundary not supported.-->
+      </ids:requirements>
+    </ids:specification>
+    <!--Sustainability Facility.3.2 : B6 and B7 : Operating resources-->
+    <ids:specification name="Sustainability.Facility.3.2" description="Sustainability Assessment of Envelope for Operating resources using IFC2X3. EN 15804 B6 and B7. " ifcVersion="IFC2X3" instructions="Correction required to support EN 15804 B6 and B7.">
+      <ids:applicability>
+        <entity>
+          <ids:name>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="IFCXX" />
+            </xs:restriction>
+          </ids:name>
+        </entity>
+        <property dataType="IFCVOLUMEMEASURE">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>NetVolume</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:minInclusive value="0.1" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+        <property dataType="IFCBOOLEAN">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>IsExternal</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <ids:simpleValue>TRUE</ids:simpleValue>
+          </ids:value>
+        </property>
+      </ids:applicability>
+      <ids:requirements description="Sustainability Requirement for Facility.3.2">
+        <property instructions="area" dataType="IFCAREAMEASURE">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>NetArea</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:minInclusive value="0" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+        <property instructions="length" dataType="IFCPOSITIVELENGTHMEASURE">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>Thickness</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:minInclusive value="0" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+      </ids:requirements>
+    </ids:specification>
+    <!--Sustainability Facility.3.2 : B6 and B7 : Operating resources-->
+    <ids:specification name="Sustainability.Facility.3.2" description="Sustainability Assessment of Envelope for Operating resources using IFC4X3. EN 15804 B6 and B7. " ifcVersion="IFC4X3" instructions="Correction required to support EN 15804 B6 and B7.">
+      <ids:applicability>
+        <entity>
+          <ids:name>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="IFCBUILTELEMENT" />
+              <xs:enumeration value="IFCBEAM" />
+              <xs:enumeration value="IFCBEARING" />
+              <xs:enumeration value="IFCCHIMNEY" />
+              <xs:enumeration value="IFCCOLUMN" />
+              <xs:enumeration value="IFCCOURSE" />
+              <xs:enumeration value="IFCCOVERING" />
+              <xs:enumeration value="IFCCURTAINWALL" />
+              <xs:enumeration value="IFCPILE" />
+              <xs:enumeration value="IFCDOOR" />
+              <xs:enumeration value="IFCFOOTING" />
+              <xs:enumeration value="IFCKERB" />
+              <xs:enumeration value="IFCMEMBER" />
+              <xs:enumeration value="IFCPLATE" />
+              <xs:enumeration value="IFCRAIL" />
+              <xs:enumeration value="IFCRAILING" />
+              <xs:enumeration value="IFCRAMP" />
+              <xs:enumeration value="IFCRAMPFLIGHT" />
+              <xs:enumeration value="IFCROOF" />
+              <xs:enumeration value="IFCSHADINGDEVICE" />
+              <xs:enumeration value="IFCSLAB" />
+              <xs:enumeration value="IFCSTAIR" />
+              <xs:enumeration value="IFCSTAIRFLIGHT" />
+              <xs:enumeration value="IFCWALL" />
+              <xs:enumeration value="IFCWALLSTANDARDCASE" />
+              <xs:enumeration value="IFCWINDOW" />
+              <xs:enumeration value="IFCDISTRIBUTIONELEMENT" />
+              <xs:enumeration value="IFCDISTRIBUTIONCONTROLELEMENT" />
+              <xs:enumeration value="IFCACTUATOR" />
+              <xs:enumeration value="IFCALARM" />
+              <xs:enumeration value="IFCCONTROLLER" />
+              <xs:enumeration value="IFCFLOWINSTRUMENT" />
+              <xs:enumeration value="IFCPROTECTIVEDEVICETRIPPINGUNIT" />
+              <xs:enumeration value="IFCSENSOR" />
+              <xs:enumeration value="IFCUNITARYCONTROLELEMENT" />
+              <xs:enumeration value="IFCDISTRIBUTIONFLOWELEMENT" />
+              <xs:enumeration value="IFCDISTRIBUTIONCHAMBERELEMENT" />
+              <xs:enumeration value="IFCENERGYCONVERSIONDEVICE" />
+              <xs:enumeration value="IFCAIRTOAIRHEATRECOVERY" />
+              <xs:enumeration value="IFCBOILER" />
+              <xs:enumeration value="IFCBURNER" />
+              <xs:enumeration value="IFCCHILLER" />
+              <xs:enumeration value="IFCCOIL" />
+              <xs:enumeration value="IFCCONDENSER" />
+              <xs:enumeration value="IFCCOOLEDBEAM" />
+              <xs:enumeration value="IFCCOOLINGTOWER" />
+              <xs:enumeration value="IFCELECTRICGENERATOR" />
+              <xs:enumeration value="IFCELECTRICMOTOR" />
+              <xs:enumeration value="IFCENGINE" />
+              <xs:enumeration value="IFCEVAPORATIVECOOLER" />
+              <xs:enumeration value="IFCEVAPORATOR" />
+              <xs:enumeration value="IFCHEATEXCHANGER" />
+              <xs:enumeration value="IFCHUMIDIFIER" />
+              <xs:enumeration value="IFCMOTORCONNECTION" />
+              <xs:enumeration value="IFCSOLARDEVICE" />
+              <xs:enumeration value="IFCTRANSFORMER" />
+              <xs:enumeration value="IFCTUBEBUNDLE" />
+              <xs:enumeration value="IFCUNITARYEQUIPMENT" />
+              <xs:enumeration value="IFCFLOWCONTROLLER" />
+              <xs:enumeration value="IFCAIRTERMINALBOX" />
+              <xs:enumeration value="IFCDAMPER" />
+              <xs:enumeration value="IFCDISTRIBUTIONBOARD" />
+              <xs:enumeration value="IFCFLOWMETER" />
+              <xs:enumeration value="IFCPROTECTIVEDEVICE" />
+              <xs:enumeration value="IFCSWITCHINGDEVICE" />
+              <xs:enumeration value="IFCVALVE" />
+              <xs:enumeration value="IFCFLOWFITTING" />
+              <xs:enumeration value="IFCCABLECARRIERFITTING" />
+              <xs:enumeration value="IFCCABLEFITTING" />
+              <xs:enumeration value="IFCDUCTFITTING" />
+              <xs:enumeration value="IFCJUNCTIONBOX" />
+              <xs:enumeration value="IFCPIPEFITTING" />
+              <xs:enumeration value="IFCFLOWMOVINGDEVICE" />
+              <xs:enumeration value="IFCCOMPRESSOR" />
+              <xs:enumeration value="IFCFAN" />
+              <xs:enumeration value="IFCPUMP" />
+              <xs:enumeration value="IFCFLOWSEGMENT" />
+              <xs:enumeration value="IFCCABLECARRIERSEGMENT" />
+              <xs:enumeration value="IFCCABLESEGMENT" />
+              <xs:enumeration value="IFCDUCTSEGMENT" />
+              <xs:enumeration value="IFCPIPESEGMENT" />
+              <xs:enumeration value="IFCFLOWSTORAGEDEVICE" />
+              <xs:enumeration value="IFCELECTRICFLOWSTORAGEDEVICE" />
+              <xs:enumeration value="IFCTANK" />
+              <xs:enumeration value="IFCFLOWTERMINAL" />
+              <xs:enumeration value="IFCAIRTERMINAL" />
+              <xs:enumeration value="IFCAUDIOVISUALAPPLIANCE" />
+              <xs:enumeration value="IFCELECTRICAPPLIANCE" />
+              <xs:enumeration value="IFCFIRESUPPRESSIONTERMINAL" />
+              <xs:enumeration value="IFCLAMP" />
+              <xs:enumeration value="IFCLIGHTFIXTURE" />
+              <xs:enumeration value="IFCLIQUIDTERMINAL" />
+              <xs:enumeration value="IFCMEDICALDEVICE" />
+              <xs:enumeration value="IFCOUTLET" />
+              <xs:enumeration value="IFCFLOWTERMINAL" />
+              <xs:enumeration value="IFCSPACEHEATER" />
+            </xs:restriction>
+          </ids:name>
+        </entity>
+        <property dataType="IFCVOLUMEMEASURE">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>NetVolume</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:minInclusive value="0.1" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+        <property dataType="IFCBOOLEAN">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>IsExternal</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <ids:simpleValue>TRUE</ids:simpleValue>
+          </ids:value>
+        </property>
+      </ids:applicability>
+      <ids:requirements description="Sustainability Requirement for Facility.3.2">
+        <property instructions="area" dataType="IFCAREAMEASURE">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>NetArea</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:minInclusive value="0" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+        <property instructions="length" dataType="IFCPOSITIVELENGTHMEASURE">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>Thickness</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:minInclusive value="0" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+      </ids:requirements>
+    </ids:specification>
+    <!--Sustainability Facility.3.3 : B6 and B7 : Operating resources-->
+    <ids:specification name="Sustainability.Facility.3.3" description="Sustainability Assessment of Systems for Operating resources using IFC2X3. EN 15804 B6 and B7. " ifcVersion="IFC2X3" instructions="Correction required to support EN 15804 B6 and B7.">
+      <ids:applicability>
+        <entity>
+          <ids:name>
+            <ids:simpleValue>IFCSYSTEM</ids:simpleValue>
+          </ids:name>
+        </entity>
+        <property dataType="IFCLABEL">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>Medium</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:enumeration value="GAS" />
+              <xs:enumeration value="ELECTRICTY" />
+              <xs:enumeration value="WATER" />
+              <xs:enumeration value="COAL" />
+              <xs:enumeration value="OIL" />
+              <xs:enumeration value="WOOD" />
+              <xs:enumeration value="WASTEWATER" />
+              <xs:enumeration value="RAINWATER" />
+              <xs:enumeration value="OTHER" />
+              <xs:enumeration value="NOTKNOWN" />
+              <xs:enumeration value="UNSET" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+      </ids:applicability>
+      <ids:requirements description="Sustainability Requirement for Facility.3.3">
+        <classification instructions="to any ISO12006-2 system (A.11) table" cardinality="required">
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:value>
+          <ids:system>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:system>
+        </classification>
+        <property instructions="gas/electricty/water/coal/oil/wood/wastewater/rainwater" dataType="IFCLABEL">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>Medium</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:enumeration value="GAS" />
+              <xs:enumeration value="ELECTRICTY" />
+              <xs:enumeration value="WATER" />
+              <xs:enumeration value="COAL" />
+              <xs:enumeration value="OIL" />
+              <xs:enumeration value="WOOD" />
+              <xs:enumeration value="WASTEWATER" />
+              <xs:enumeration value="RAINWATER" />
+              <xs:enumeration value="OTHER" />
+              <xs:enumeration value="NOTKNOWN" />
+              <xs:enumeration value="UNSET" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+        <property instructions="real value approriate to the medium" dataType="IFCPOSITIVERATIOMEASURE">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>Demand</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:minInclusive value="0" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+        <property instructions="real value approriate to the medium" dataType="IFCPOSITIVERATIOMEASURE">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>ExternallySupplied</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:minInclusive value="0" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+        <property instructions="real value approriate to the medium" dataType="IFCPOSITIVERATIOMEASURE">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>InternallySupplied</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:minInclusive value="0" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+      </ids:requirements>
+    </ids:specification>
+    <!--Sustainability Facility.3.3 : B6 and B7 : Operating resources-->
+    <ids:specification name="Sustainability.Facility.3.3" description="Sustainability Assessment of Systems for Operating resources using IFC4X3. EN 15804 B6 and B7. " ifcVersion="IFC4X3" instructions="Correction required to support EN 15804 B6 and B7.">
+      <ids:applicability>
+        <entity>
+          <ids:name>
+            <ids:simpleValue>IFCSYSTEM</ids:simpleValue>
+          </ids:name>
+        </entity>
+        <property dataType="IFCLABEL">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>Medium</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:enumeration value="GAS" />
+              <xs:enumeration value="ELECTRICTY" />
+              <xs:enumeration value="WATER" />
+              <xs:enumeration value="COAL" />
+              <xs:enumeration value="OIL" />
+              <xs:enumeration value="WOOD" />
+              <xs:enumeration value="WASTEWATER" />
+              <xs:enumeration value="RAINWATER" />
+              <xs:enumeration value="OTHER" />
+              <xs:enumeration value="NOTKNOWN" />
+              <xs:enumeration value="UNSET" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+      </ids:applicability>
+      <ids:requirements description="Sustainability Requirement for Facility.3.3">
+        <classification instructions="to any ISO12006-2 system (A.11) table" cardinality="required">
+          <ids:value>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:value>
+          <ids:system>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:system>
+        </classification>
+        <property instructions="gas/electricty/water/coal/oil/wood/wastewater/rainwater" dataType="IFCLABEL">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>Medium</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:enumeration value="GAS" />
+              <xs:enumeration value="ELECTRICTY" />
+              <xs:enumeration value="WATER" />
+              <xs:enumeration value="COAL" />
+              <xs:enumeration value="OIL" />
+              <xs:enumeration value="WOOD" />
+              <xs:enumeration value="WASTEWATER" />
+              <xs:enumeration value="RAINWATER" />
+              <xs:enumeration value="OTHER" />
+              <xs:enumeration value="NOTKNOWN" />
+              <xs:enumeration value="UNSET" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+        <property instructions="real value approriate to the medium" dataType="IFCPOSITIVERATIOMEASURE">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>Demand</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:minInclusive value="0" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+        <property instructions="real value approriate to the medium" dataType="IFCPOSITIVERATIOMEASURE">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>ExternallySupplied</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:minInclusive value="0" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+        <property instructions="real value approriate to the medium" dataType="IFCPOSITIVERATIOMEASURE">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>InternallySupplied</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:minInclusive value="0" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+      </ids:requirements>
+    </ids:specification>
+    <!--Sustainability Facility.3.4 : B6 and B7 : Operating resources-->
+    <ids:specification name="Sustainability.Facility.3.4" description="Sustainability Assessment of Electricals for Operating resources using IFC2X3. EN 15804 B6 and B7. " ifcVersion="IFC2X3" instructions="Correction required to support EN 15804 B6 and B7.">
+      <ids:applicability>
+        <entity>
+          <ids:name>
+            <ids:simpleValue>IFCELECTRICALAPPLIANCE</ids:simpleValue>
+          </ids:name>
+        </entity>
+      </ids:applicability>
+      <ids:requirements description="Sustainability Requirement for Facility.3.4">
+        <property instructions="fraction" dataType="IFCPOSITIVERATIOMEASURE">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>Utilization</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:minInclusive value="0" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+      </ids:requirements>
+    </ids:specification>
+    <!--Sustainability Facility.3.4 : B6 and B7 : Operating resources-->
+    <ids:specification name="Sustainability.Facility.3.4" description="Sustainability Assessment of Electricals for Operating resources using IFC4X3. EN 15804 B6 and B7. " ifcVersion="IFC4X3" instructions="Correction required to support EN 15804 B6 and B7.">
+      <ids:applicability>
+        <entity>
+          <ids:name>
+            <ids:simpleValue>IFCELECTRICALAPPLIANCE</ids:simpleValue>
+          </ids:name>
+        </entity>
+      </ids:applicability>
+      <ids:requirements description="Sustainability Requirement for Facility.3.4">
+        <property instructions="fraction" dataType="IFCPOSITIVERATIOMEASURE">
+          <ids:propertySet>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="*." />
+            </xs:restriction>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>Utilization</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction>
+              <xs:minInclusive value="0" />
+            </xs:restriction>
+          </ids:value>
+        </property>
+      </ids:requirements>
+    </ids:specification>
+  </ids:specifications>
+</ids:ids>
